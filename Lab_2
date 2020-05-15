@@ -1,0 +1,25 @@
+LAB: String Patterns, Sorting & Grouping
+The practice problems for this Lab will provide hands on experience with string
+patterns, sorting result sets and grouping result sets. I will be learning how to run
+SQL scripts to create several tables at once, as well as how to load data into tables
+from .csv files.
+  HR Database:
+I will be working on a sample HR database for this Lab. This HR database
+schema consists of 5 tables called EMPLOYEES, JOB_HISTORY, JOBS,
+DEPARTMENTS and LOCATIONS.
+  Script file to create tables:
+https://d18ky98rnyall9.cloudfront.net/dotr1jnBEeirWBJEBbG4Hg_774f09a039c111e88d9d77a1dc9cd80f_Script_Create_Tables.sql?Expires=1589673600&Signature=Z1VteJ3qMlKUdSvpA~BzZBugCz2aNsJtd17KDtBgefw5Fy~OOLS2A1URO1ugykJqkdPTEqKQC9T9MhVU8OaGVqx6K53k1rvIun-06ZbiayXQYamFOCjofpv5MEwzJV9uOIx-BZtadLR3vnR3i1~sEcBHfdndbViKrdUTwxK6kpU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
+  The following data files:
+Employees.csv
+https://d18ky98rnyall9.cloudfront.net/sOnWz044EeirCxICdYDggg_b0f6cea04e3811e8b8cebf6e0d0102c9_Employees.csv?Expires=1589673600&Signature=iqJrosMME-KcKdxzaJU055L~xCz6k7TJ7HcHULkf6shb3Rpxvk2tP6BScjTwiTH19O5bQjkpk4Spo97qGmoJ2z9M3f9SKBMO10joyOqSguBzcdFy-ITAKDR3raHjJo9qMgdSitS~PFShEgouM2fylKlOcJgYASiYLiRjz1aVs-s_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
+Departments.csv
+https://d18ky98rnyall9.cloudfront.net/3v4PzTnGEei9LwoRWz3xkg_df1c45c039c611e88ddeede97236c1ee_Departments.csv?Expires=1589673600&Signature=WOii0FTg3od5FZuCklXJsyd-rzT~MLw12TmJhcDOqnk70uiNjrcx7wnSrkYsHy-TfOVUs0L4JMfWHqw9tgPllfuCLJvrzmZapHMZf91yqffGdB7YROPlQfgV5W6Xi~IDEli5rBShwMczBq14122cOOBYc0FED2mDyV5Qhi3bZXA_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
+Jobs.csv
+https://d18ky98rnyall9.cloudfront.net/9CxFxTnGEei9LwoRWz3xkg_f439169039c611e88d9d77a1dc9cd80f_Jobs.csv?Expires=1589673600&Signature=O7m8yOa8fJol2IoXklaFwIzSFNJimhCljwhvO5qO-WSZ~jdADS44l6hStoIGaDjACD-peay7B45N0NQEt3k67-aIOXndBW7xjqRWK9GAxH5YPmk7A6EFnx~G8y6Ez8W~c~RWdRoJlQhQgJKK~KKjiJHxBREqMUm6zfLKsvX90Yw_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
+Locations.csv
+https://d18ky98rnyall9.cloudfront.net/NY7bsTnHEeig8Q74SlgkIA_359a261039c711e8aac68f378f37a422_Locations.csv?Expires=1589673600&Signature=apojIAwbjowqJtUjnYTUYbe3lbuKcehH3x4UwS9gn2S9sVJatKi9Ig~2Q7jf7QwGEyyheaIl8xSr6GnF8Q448cpmWV3Bs6Y4DXkdOEEZ2Ac8u3LEhddlK~n-cCTWGWG6vgHqiljKmyIRBZWNCEKzyMlWSTPlFe1zwpQRj8vd9Uk_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
+JobsHistory.csv
+https://d18ky98rnyall9.cloudfront.net/2TmCvE44EeirCxICdYDggg_d94d31504e3811e8b6f01b3f1a8cfb1c_JobsHistory.csv?Expires=1589673600&Signature=DbLGo~W-G8QjvBa72RV1thH0LBqbfsqDUzjskYWW4~IQr3Xg9wSNPWLKg38Guq1qXS-s-FUP6yM48ddpqX0nYnE7RC04RgudyVT~6X1uqsMMFlbGkBYGNhSIwwL3~zPqtC-67USXb6lACAQZeUiQgK0YS8C3QcVziPwRjs4hqqI_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
+
+
+
