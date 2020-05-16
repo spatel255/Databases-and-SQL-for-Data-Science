@@ -20,6 +20,226 @@ Locations.csv
 https://d18ky98rnyall9.cloudfront.net/NY7bsTnHEeig8Q74SlgkIA_359a261039c711e8aac68f378f37a422_Locations.csv?Expires=1589673600&Signature=apojIAwbjowqJtUjnYTUYbe3lbuKcehH3x4UwS9gn2S9sVJatKi9Ig~2Q7jf7QwGEyyheaIl8xSr6GnF8Q448cpmWV3Bs6Y4DXkdOEEZ2Ac8u3LEhddlK~n-cCTWGWG6vgHqiljKmyIRBZWNCEKzyMlWSTPlFe1zwpQRj8vd9Uk_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
 JobsHistory.csv
 https://d18ky98rnyall9.cloudfront.net/2TmCvE44EeirCxICdYDggg_d94d31504e3811e8b6f01b3f1a8cfb1c_JobsHistory.csv?Expires=1589673600&Signature=DbLGo~W-G8QjvBa72RV1thH0LBqbfsqDUzjskYWW4~IQr3Xg9wSNPWLKg38Guq1qXS-s-FUP6yM48ddpqX0nYnE7RC04RgudyVT~6X1uqsMMFlbGkBYGNhSIwwL3~zPqtC-67USXb6lACAQZeUiQgK0YS8C3QcVziPwRjs4hqqI_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
+=============================================================================================================================
+Database          : BLUDB                  
+Instance          : db2inst1               
+Host name         : 10.120.72.10           
+Authorization Id  : dlw16552               
+Run method        : JDBC                   
+Date              : May 16, 2020 7:47:58 PM
+Run time (seconds): completed              
+
+select F_Name, L_Name
+from EMPLOYEES
+where ADDRESS LIKE '%Elgin,IL%'
+
+select F_NAME , L_NAME
+from EMPLOYEES
+where B_DATE LIKE '197%'
+
+select F_NAME , L_NAME
+from EMPLOYEES
+where (SALARY BETWEEN 60000 and 70000)
+and DEP_ID = 5
+
+select F_NAME, L_NAME, DEP_ID
+from EMPLOYEES
+ORDER BY DEP_ID
+
+select F_NAME, L_NAME, DEP_ID
+from EMPLOYEES
+ORDER BY DEP_ID desc, L_NAME desc
+
+select DEP_ID, COUNT(*)
+from EMPLOYEES
+group by DEP_ID
+
+select DEP_ID, COUNT(*), AVG(Salary)
+from EMPLOYEES
+group by DEP_ID
+
+select DEP_ID, COUNT(*) as "Numbers in Department", AVG(Salary) as "Average Salary"
+from EMPLOYEES
+group by DEP_ID
+order by "Average Salary"
+
+select DEP_ID, COUNT(*) as "Numbers in Department", AVG(Salary) as "Average Salary"
+from EMPLOYEES
+group by DEP_ID
+having count(*) < 4
+order by "Average Salary"
+
+select D.DEP_NAME , E.F_NAME, E.L_NAME
+from EMPLOYEES as E, DEPARTMENTS as D
+where E.DEP_ID = D.DEPT_ID_DEP
+order by D.DEP_NAME, E.L_NAME desc
 
 
 
+=======================================================================================
+select F_Name, L_Name
+from EMPLOYEES
+where ADDRESS LIKE '%Elgin,IL%'
+
+Run time (seconds): 0.002    
+Status            : succeeded
+
+F_NAME L_NAME
+------ ------
+Alice  James 
+Nancy  Allen 
+Ann    Jacob 
+
+
+=======================================================================================
+select F_NAME , L_NAME
+from EMPLOYEES
+where B_DATE LIKE '197%'
+
+Run time (seconds): 0.001    
+Status            : succeeded
+
+F_NAME L_NAME
+------ ------
+Alice  James 
+Nancy  Allen 
+Mary   Thomas
+
+
+=======================================================================================
+select F_NAME , L_NAME
+from EMPLOYEES
+where (SALARY BETWEEN 60000 and 70000)
+and DEP_ID = 5
+
+Run time (seconds): 0.001    
+Status            : succeeded
+
+F_NAME  L_NAME
+------- ------
+Santosh Kumar 
+Ann     Jacob 
+
+
+=======================================================================================
+select F_NAME, L_NAME, DEP_ID
+from EMPLOYEES
+ORDER BY DEP_ID
+
+Run time (seconds): 0.001    
+Status            : succeeded
+
+F_NAME  L_NAME  DEP_ID   
+------- ------- ---------
+Ahmed   Hussain 2        
+Nancy   Allen   2        
+Alice   James   5        
+Steve   Wells   5        
+Santosh Kumar   5        
+Ann     Jacob   5        
+Mary    Thomas  7        
+Bharath Gupta   7        
+Andrea  Jones   7        
+
+
+=======================================================================================
+select F_NAME, L_NAME, DEP_ID
+from EMPLOYEES
+ORDER BY DEP_ID desc, L_NAME desc
+
+Run time (seconds): 0.001    
+Status            : succeeded
+
+F_NAME  L_NAME  DEP_ID   
+------- ------- ---------
+Mary    Thomas  7        
+Andrea  Jones   7        
+Bharath Gupta   7        
+Steve   Wells   5        
+Santosh Kumar   5        
+Alice   James   5        
+Ann     Jacob   5        
+Ahmed   Hussain 2        
+Nancy   Allen   2        
+
+
+=======================================================================================
+select DEP_ID, COUNT(*)
+from EMPLOYEES
+group by DEP_ID
+
+Run time (seconds): 0.001    
+Status            : succeeded
+
+DEP_ID    2
+--------- -
+2         2
+5         4
+7         3
+
+
+=======================================================================================
+select DEP_ID, COUNT(*), AVG(Salary)
+from EMPLOYEES
+group by DEP_ID
+
+Run time (seconds): 0.001    
+Status            : succeeded
+
+DEP_ID    2 3                            
+--------- - -----------------------------
+2         2 80000.00000000000000000000000
+5         4 65000.00000000000000000000000
+7         3 66666.66666666666666666666666
+
+
+=======================================================================================
+select DEP_ID, COUNT(*) as "Numbers in Department", AVG(Salary) as "Average Salary"
+from EMPLOYEES
+group by DEP_ID
+order by "Average Salary"
+
+Run time (seconds): 0.001    
+Status            : succeeded
+
+DEP_ID    Numbers in Department Average Salary               
+--------- --------------------- -----------------------------
+5                             4 65000.00000000000000000000000
+7                             3 66666.66666666666666666666666
+2                             2 80000.00000000000000000000000
+
+
+=======================================================================================
+select DEP_ID, COUNT(*) as "Numbers in Department", AVG(Salary) as "Average Salary"
+from EMPLOYEES
+group by DEP_ID
+having count(*) < 4
+order by "Average Salary"
+
+Run time (seconds): 0.001    
+Status            : succeeded
+
+DEP_ID    Numbers in Department Average Salary               
+--------- --------------------- -----------------------------
+7                             3 66666.66666666666666666666666
+2                             2 80000.00000000000000000000000
+
+
+=======================================================================================
+select D.DEP_NAME , E.F_NAME, E.L_NAME
+from EMPLOYEES as E, DEPARTMENTS as D
+where E.DEP_ID = D.DEPT_ID_DEP
+order by D.DEP_NAME, E.L_NAME desc
+
+Run time (seconds): 0.011    
+Status            : succeeded
+
+DEP_NAME       F_NAME  L_NAME
+-------------- ------- ------
+Design Team    Mary    Thomas
+Design Team    Andrea  Jones 
+Design Team    Bharath Gupta 
+Software Group Steve   Wells 
+Software Group Santosh Kumar 
+Software Group Alice   James 
+Software Group Ann     Jacob 
