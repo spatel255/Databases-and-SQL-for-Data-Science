@@ -1,4 +1,4 @@
-Lab:Composing and Running basic SQL queries
+Lab: Composing and Running basic SQL queries
 
 So far in this module I learned about the five basic SQL statements to create tables, insert data, select results, update, and delete data. In this lab, I practiced composing and running these statements via hands-on experiences.
 To write and execute the SQL statements in this lab, I used the SQL editor (Run SQL) in your Db2 database instance on IBM Cloud.
